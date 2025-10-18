@@ -1,3 +1,10 @@
+# Práctica 8: Regresor de Clima
+"""
+Integrantes:
+González Martínez Silvia
+López Reyes José Roberto
+"""
+
 import pandas as pd
 
 nombre_archivo_original = 'Data/Sierra México, Tlalpexco,... 2023-10-01 to 2024-09-30.csv'
