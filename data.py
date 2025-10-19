@@ -5,6 +5,7 @@ González Martínez Silvia
 López Reyes José Roberto
 """
 
+# Parte 1: Obtención de los datos
 import pandas as pd
 
 nombre_archivo_original = 'Data/Sierra México, Tlalpexco,... 2023-10-01 to 2024-09-30.csv'
