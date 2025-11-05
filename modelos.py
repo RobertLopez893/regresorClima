@@ -5,7 +5,7 @@ González Martínez Silvia
 López Reyes José Roberto
 """
 
-# Parte 3: Selección del mejor modelo
+# Parte 4: Selección del mejor modelo
 import pandas as pd
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor, HistGradientBoostingRegressor
 from xgboost import XGBRegressor

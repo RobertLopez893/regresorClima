@@ -5,13 +5,13 @@ González Martínez Silvia
 López Reyes José Roberto
 """
 
-# Parte 2: Limpieza final y entrenamiento del modelo
+# Parte 3: Entrenamiento del modelo
 import pandas as pd
 from sklearn.ensemble import GradientBoostingRegressor, HistGradientBoostingRegressor
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score, root_mean_squared_error
 from sklearn.preprocessing import StandardScaler
 
-nombre_archivo_original = 'Data/final_datset_clima.csv'
+nombre_archivo_original = 'Data/escom_data2.csv'
 
 print(f"Cargando el archivo: {nombre_archivo_original}.")
 try:
@@ -20,6 +20,8 @@ except FileNotFoundError:
     print(f"No se encontró el archivo '{nombre_archivo_original}'.")
     exit()
 
+print(df)
+
 # Eliminar datos vacíos
 df_sin_nulos = df.dropna()
 
@@ -27,7 +29,7 @@ df_sin_nulos = df.dropna()
 df_final = df_sin_nulos.drop('fecha', axis=1)
 
 # Dataset super final
-nombre_archivo_final = 'super_final_dataset.csv'
+nombre_archivo_final = 'Data/final_escom_data.csv'
 df_final.to_csv(nombre_archivo_final, index=False)
 
 print(f"\nDataset final guardado como: '{nombre_archivo_final}'")
