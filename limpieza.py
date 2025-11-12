@@ -2,7 +2,7 @@
 import pandas as pd
 
 # Original de Parte 1
-df = pd.read_csv("Data/escom_cleaned1.csv")
+df = pd.read_csv("Data/cleaned1999.csv")
 
 if 'hora' in df.columns:
     df['fecha'] = pd.to_datetime(df['fecha'] + ' ' + df['hora'])
@@ -37,5 +37,5 @@ df[f'{temp_col}_hace1anio']     = df[temp_col].shift(8760) # 8760 horas = 1 año
 df = df.reset_index()
 
 # Guardamos con coma (estándar)
-df.to_csv("Data/escom_data2.csv", index=False, sep=',')
+df.to_csv("Data/2clean1999.csv", index=False, sep=',')
 print("Parte 2 (Limpieza) finalizada y corregida.")

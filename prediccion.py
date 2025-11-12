@@ -20,7 +20,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # Configuración Inicial
-RUTA_DATOS = 'Data/final_escom_data.csv'
+RUTA_DATOS = 'Data/data_upto_10_nov.csv'
 COLUMNA_TARGET = 'temp'
 
 # Cargar y construir el índice de fechas
@@ -154,6 +154,7 @@ plt.ylabel('Temperatura')
 plt.legend()
 plt.grid(True)
 plt.tight_layout()
+plt.savefig("test_vs_pred.png")
 plt.show()
 
 # Re-entrenar el escalador con todos los datos
@@ -382,10 +383,10 @@ if predicciones_futuras is not None:
     plt.show()
 
     # Guardar las predicciones en un CSV
-    #try:
-        #predicciones_futuras.to_csv("predicciones_futuras.csv")
-        #print("\nPredicciones guardadas en 'predicciones_futuras.csv'")
-    #except Exception as e:
-        #print(f"\nNo se pudieron guardar las predicciones: {e}")
-#else:
-    #print("\nNo se pudieron generar las predicciones futuras debido a un error.")
+    try:
+        predicciones_futuras.to_csv("predicciones_futuras.csv")
+        print("\nPredicciones guardadas en 'predicciones_futuras.csv'")
+    except Exception as e:
+        print(f"\nNo se pudieron guardar las predicciones: {e}")
+else:
+    print("\nNo se pudieron generar las predicciones futuras debido a un error.")
