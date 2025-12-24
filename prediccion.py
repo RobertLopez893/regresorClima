@@ -20,7 +20,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # Configuración Inicial
-RUTA_DATOS = 'Data/data_upto_10_nov.csv'
+RUTA_DATOS = 'Data/data_upto_11_nov.csv'
 COLUMNA_TARGET = 'temp'
 
 # Cargar y construir el índice de fechas
